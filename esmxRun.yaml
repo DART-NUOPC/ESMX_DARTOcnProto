@@ -1,0 +1,56 @@
+ESMX:
+
+  App:
+    globalResourceControl: true
+    logKindFlag: ESMF_LOGKIND_Multi
+    logAppendFlag: false
+    logFlush: true
+    startTime: 2019-08-29T00:00:00
+    stopTime: 2019-08-29T02:00:00
+    fieldDictionary: fd_cesm.yaml
+
+  Driver:
+    componentList: [DART, OCN]
+    attributes:
+      Verbosity: high
+    runSequence: |
+      @3600
+        OCN -> DART :remapMethod=redist
+        DART
+        DART -> OCN :remapMethod=redist
+        OCN
+      @
+
+    
+
+attributes: &common
+  case_name: test
+  Verbosity: low
+  ScalarFieldCount: 2
+  ScalarFieldIdxGridNX: 1
+  ScalarFieldIdxGridNY: 2
+  ScalarFieldName: cpl_scalars
+
+DART:
+  model: DART
+  attributes:
+    <<: *common
+    Verbosity: high
+  petList: [0, 1]
+
+
+OCN:
+  model: docn
+  petList: [2, 3]
+  attributes:
+    <<: *common
+    case_name: test
+    Verbosity: high
+    read_restart: false
+    restart_n: 6
+    restart_option: nhours
+    restart_ymd: -999
+    stop_n: 6
+    stop_option : nhours
+    stop_ymd : -999
+

@@ -1,0 +1,78 @@
+((cdeps_docn_comp))  case_name         = test
+((cdeps_docn_comp))  datamode          = sstdata
+((cdeps_docn_comp))  model_meshfile    = TX025_210327_ESMFmesh_py.nc
+((cdeps_docn_comp))  model_maskfile    = TX025_210327_ESMFmesh_py.nc
+((cdeps_docn_comp))  nx_global         =       1440
+((cdeps_docn_comp))  ny_global         =        720
+((cdeps_docn_comp))  restfilm          = null
+((cdeps_docn_comp))  skip_restart_read =      T
+((cdeps_docn_comp))  import_data_fields = none
+  sst_constant_value =   -1.00000000000000     
+((cdeps_docn_comp))  export_all        =      T
+ (dshr_pio_init) : pio_netcdf_format = 64BIT_OFFSET         512
+ (dshr_pio_init) : pio_typename = NETCDF           2
+ (dshr_pio_init) : pio_root =            1
+ (dshr_pio_init) : pio_stride =          -99
+ (dshr_pio_init) : pio_numiotasks =          -99
+ (dshr_pio_init) : update pio_numiotasks =            2
+ (dshr_pio_init) : update pio_stride =            1
+ (dshr_pio_init) : calling pio init
+ (dshr_pio_init) : pio_debug_level =            0
+ (dshr_pio_init) : pio_rearranger = BOX           1
+ (dshr_pio_init) : calling pio init
+ (dshr_pio_init) : pio_rearr_comm_type = P2P           0
+ (dshr_pio_init) : pio_rearr_comm_fcd = 2DENABLE           0
+ (dshr_pio_init) : pio_rearr_comm_enable_hs_comp2io =  T
+ (dshr_pio_init) : pio_rearr_comm_enable_isend_comp2io =  F
+ (dshr_pio_init) : pio_rearr_comm_max_pend_req_comp2io =            0
+ (dshr_pio_init) : pio_rearr_comm_enable_hs_io2comp =  F
+ (dshr_pio_init) : pio_rearr_comm_enable_isend_io2comp =  T
+ (dshr_pio_init) : pio_rearr_comm_max_pend_req_io2comp =           64
+ (dshr_pio_init) calling pio_set_rearr_opts
+(dshr_mesh_init) (dshr_mod:dshr_mesh_init) obtained OCN mesh and mask from TX025_210327_ESMFmesh_py.nc
+(shr_stream_getCalendar) opening stream filename = sst.day.mean.2019.nc
+(shr_stream_getCalendar) closing stream filename = sst.day.mean.2019.nc
+ (shr_strdata_set_stream_domain) stream_nlev =            1
+(shr_sdat_init) Creating field bundle array fldbun_data of size 2 for stream        1
+    adding field So_t to fldbun_data for stream        1
+    adding field So_omask to fldbun_data for stream        1
+ 
+(shr_strdata_print) ----------------------------------------------------------
+(shr_strdata_print) name        = stream_data
+(shr_strdata_print) calendar    = GREGORIAN
+(shr_strdata_print) eccen       =  1.000000E+36
+(shr_strdata_print) mvelpp      =  1.000000E+36
+(shr_strdata_print) lambm0      =  1.000000E+36
+(shr_strdata_print) obliqr      =  1.000000E+36
+(shr_strdata_print) pio_iotype  =      2
+(shr_strdata_print) nstreams    =      1
+(shr_strdata_print) Per stream information 
+(shr_strdata_print)   taxMode ( 1) = limit
+(shr_strdata_print)   dtlimit ( 1) =  1.500000E+00
+(shr_strdata_print)   mapalgo ( 1) = bilinear
+(shr_strdata_print)   tintalgo( 1) = linear
+(shr_strdata_print)   readmode( 1) = single
+(shr_strdata_print)   vectors ( 1) = null
+(shr_strdata_print)   src_mask( 1) = 0
+(shr_strdata_print)   dst_mask( 1) = 0
+(shr_strdata_print)  
+(shr_strdata_print) ----------------------------------------------------------
+  successfully initialized sdat
+(dshr_addfield_add) setting pointer for export state So_omask
+(dshr_addfield_add) setting pointer for export state So_s
+(dshr_addfield_add) setting pointer for export state So_t
+(dshr_addfield_add) setting pointer for export state So_u
+(dshr_addfield_add) setting pointer for export state So_v
+(shr_strdata_readstrm) opening   : sst.day.mean.2019.nc
+(shr_strdata_readstrm) setting pio descriptor : sst.day.mean.2019.nc
+(shr_strdata_set_stream_iodesc) setting iodesc for : sst with dimlens(1), dimlens(2) =     1440       720   variable as time dimension time
+(shr_strdata_readstrm) reading file lb: sst.day.mean.2019.nc     188
+(shr_strdata_readstrm) reading file ub: sst.day.mean.2019.nc     189
+(dshr_restart_write)  writing test.docn.r.2019-08-29-21600.nc20190829  21600
+(dshr_restart_write)  writing test.docn.r.2019-08-29-43200.nc20190829  43200
+(dshr_restart_write)  writing test.docn.r.2019-08-29-64800.nc20190829  64800
+(shr_strdata_readstrm) reading file ub: sst.day.mean.2019.nc     190
+(dshr_restart_write)  writing test.docn.r.2019-08-30-00000.nc20190830  0
+ 
+ docn : end of main integration loop
+ 

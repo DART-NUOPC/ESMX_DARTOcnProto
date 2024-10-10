@@ -1,0 +1,23 @@
+application:
+  #link_packages: OpenMP
+  link_libraries: piof
+  disable_comps: ESMX_Data
+  
+
+components:
+
+  docn:
+
+    build_type: none
+    source_dir: /glade/u/home/sumansh/CDEPS/docn
+    install_prefix: /glade/u/home/sumansh/CDEPS/install
+    libraries: docn dshr streams cdeps_share
+    fort_module: cdeps_docn_comp.mod
+
+  dart:
+    build_type: script
+    build_script: quickbuild.sh
+    source_dir: /glade/u/home/sumansh/ESMX_DARTOcnProto/NUOPC_DART-code-development/DART/models/cdeps/work
+    install_prefix: /glade/u/home/sumansh/ESMX_DARTOcnProto/NUOPC_DART-code-development/DART/models/cdeps/work
+    fort_module: dart_comp_nuopc.mod
+    

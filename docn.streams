@@ -1,0 +1,16 @@
+stream_info:               PRESCRIBED01
+taxmode01:                 limit
+mapalgo01:                 bilinear
+tInterpAlgo01:             linear
+readMode01:                single
+dtlimit01:                 1.5
+stream_offset01:           0
+yearFirst01:               2019
+yearLast01:                2019
+yearAlign01:               2019
+stream_vectors01:          "null"
+stream_mesh_file01:        "TX025_210327_ESMFmesh_py.nc"
+stream_lev_dimname01:      null
+stream_data_files01:       sst.day.mean.2019.nc
+stream_data_variables01:   "sst So_t" "sst So_omask"
+
